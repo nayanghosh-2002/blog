@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <title>Welcome Page</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="animated-message">Welcome to My Website</h1><br><br>
+        <h2 class="scrolling-message">{{ msg }}</h2>
+        
+    </header>
+
+    <!-- <section class="image-container">
+        <div class="card">
+            <img src="{% static 'images/2.webp' %}" alt="Image 2 - Nayan">
+        </div>
+    </section> -->
+    <br>
+
+    <div class="clock" style="background-image: url('{% static 'images/2.webp' %}'); background-size: cover;">
+        <div class="center"></div>
+        <div class="hour" style="transform: translate(-50%, -100%) rotate({{ hour_deg }}deg);"></div>
+        <div class="minute" style="transform: translate(-50%, -100%) rotate({{ minute_deg }}deg);"></div>
+        <div class="second" style="transform: translate(-50%, -100%) rotate({{ second_deg }}deg);">
+            <div class="second-circle"></div>
+        </div>
+    </div>
+    <div>
+        <p class="animated-calendar">{{ date }}</p>
+    </div>
+    <br>
+    <footer>
+        <p>Thank you for visiting. Have a great day!</p>
+    </footer>
+    <br>
+    <div>
+        <h6>Made by Nayan❤️</h6>
+    </div>
+</body>
+
+</html>
